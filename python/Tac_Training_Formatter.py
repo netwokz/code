@@ -1,7 +1,7 @@
 import openpyxl
 
-# path = "C:\\Users\\deanejst\\Documents\\code\\python\\tac-segments-test.xlsx"
-path = "C:\\Users\\netwokz\\Documents\\CODE\\code\\python\\tac-segments-test.xlsx"
+path = "C:\\Users\\deanejst\\Documents\\code\\python\\tac-segments-test.xlsx"
+# path = "C:\\Users\\netwokz\\Documents\\CODE\\code\\python\\tac-segments-test.xlsx"
 
 ALLOWED_ASSETS = ["AmbaFlex", "Best Flex", "Control Cabinets", "Dematic SC3 Sorter", "Dematic SL2 Sorter", "Directed Palletization", "Electrical Conveyors", "Intralox", "Mechanical Conveyors", "RWC4 (Fanuc-R2000, Robotic work cells)", "SLAM", "Shop Tools", "SmartPac", "Tote Stacker", "Transnorm"
                   ]
@@ -46,8 +46,8 @@ for i in range(2, row + 1):
         sheet_obj.delete_rows(i, 1)
 
 wb_object.save(
-    "C:\\Users\\netwokz\\Documents\\CODE\\code\\python\\modified.xlsx")
-# path = "C:\\Users\\deanejst\\Documents\\code\\python\\modified.xlsx"
+    # "C:\\Users\\netwokz\\Documents\\CODE\\code\\python\\modified.xlsx")
+    path = "C:\\Users\\deanejst\\Documents\\code\\python\\modified.xlsx")
 
 # for i in range(1, row + 1):
 #     cell_obj = sheet_obj.cell(row = i, column = 2)
