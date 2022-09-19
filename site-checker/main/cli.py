@@ -3,6 +3,7 @@ from unittest import result
 
 def read_cli_args():
     parser = argparse.ArgumentParser(prog="site_checker", description="check the availability of websites")
+    
     parser.add_argument(
         "-u",
         "--urls",
@@ -20,6 +21,13 @@ def read_cli_args():
         type=str,
         default="",
         help="read URLs from a file",
+    )
+
+    parser.add_argument(
+        "-a",
+        "--asynchronous",
+        action="store_true",
+        help="run the connectivity check asynchronously",
     )
 
     return parser.parse_args()
