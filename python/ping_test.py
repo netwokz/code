@@ -2,8 +2,11 @@ from fileinput import filename
 from http import server
 import platform
 import subprocess
+import webbrowser 
 
 server_list = []
+
+servers = "10.79.221."
 
 #filename = 'ip.txt'
 #with open(filename, 'r') as reader:
@@ -19,13 +22,23 @@ def ping(host):
         print('Something went wrong!')
         return False
     if response == 0:
-        #print('{} is Online'.format(host))
+        print('{} is Online'.format(host))
         return True
     else:
         #print('{} is Offline'.format(host))
         return False
 
-#def do_pings():
-#    for ip in server_list:
-#        ping(ip)
+def do_pings():
+    for x in range(33,100):
+        server = servers + str(x)
+        ping(server)
 
+
+# def open_website():
+#     for x in range(220,240):
+#         url = "http://10.79.221." + str(x) + "/remote.html"
+#         webbrowser.open(url)
+
+# open_website()
+
+# do_pings()
